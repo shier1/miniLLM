@@ -1,0 +1,20 @@
+model:
+  name: "MiniLLM"
+
+dataset:
+  tokenizer:
+    path: "./tokenizer"
+  
+  data_path: "./dataset/pretrain_hq.jsonl"
+  max_length: 512
+
+train:
+  optimizer:
+    name: AdamW
+  batch_size: 4
+  num_workers: 4
+
+  lr_scheduler:
+    name: "lr"
+
+output_dir: "./output"
